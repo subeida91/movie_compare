@@ -14,7 +14,7 @@ return movie.Title
 
 //how to fetch the data. we are making a network request. data is the information we  get back from the request
 async fetchData(searchTerm) {
-const response = await axios.get('http://www.omdbapi.com/', {
+const response = await axios.get('https://www.omdbapi.com/', {
   params: {
       apikey: 'f5f71ae8',
       s: searchTerm
@@ -58,7 +58,7 @@ let leftMovie;
 let rightMovie
 //we are creating a function thats grabs expanded information about the film
 const onMovieSelect = async (movie, summaryElement, side) => {
-  const response = await axios.get('http://www.omdbapi.com/', {
+  const response = await axios.get('https://www.omdbapi.com/', {
     params: {
       apikey: 'd9835cc5',
       i: movie.imdbID
